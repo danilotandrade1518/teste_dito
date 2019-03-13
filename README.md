@@ -24,7 +24,7 @@ Após isso, siga os passos à seguir:
 
 1. Populando o banco de dados:
 
-Navegue até a pasta ```api``` e execute o comando: <br>
+Navegue até a pasta **api** e execute o comando: <br>
 ```node populate-bd.js```
 
 2. Instale as dependências da aplicação:
