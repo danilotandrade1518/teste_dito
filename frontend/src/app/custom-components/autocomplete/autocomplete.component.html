@@ -1,0 +1,25 @@
+<div class="autcom-wrapper form-group">
+  <input type="email" class="form-control" placeholder="Digite a sua busca" (keyup)="handleSearchChange($event)">
+
+  <ul class="autcom-result nav flex-column" [class.hide]="events.length === 0" (scroll)="onScroll($event)">
+    <li class="autcom-item nav-item" *ngFor="let event of events" (click)="eventSelected(event)">
+      <span class="nav-link">{{event.event + ' - ' + event.timestamp }}</span>
+    </li>
+  </ul>
+
+  <div class="autcom-load" [class.hide]="!loading">
+    <div class="autcom-load-wrapper">
+      <div class="spinner-grow text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <small class="form-text text-muted">Total de {{totalEvents ? totalEvents : 0}} resultados econtrados.</small>
+</div>

@@ -1,0 +1,28 @@
+@import '../../../variables.scss';
+
+.autcom-wrapper{
+  margin: 10px;
+
+  .autcom-result {
+    background-color: lighten($primary, 35%);
+    flex-wrap: nowrap;
+    max-height: 362px;
+    overflow-y: scroll;
+
+    .autcom-item {
+      cursor: pointer;
+
+      :hover{
+        background-color: lighten($primary, 25%);
+      }
+    }
+  }
+
+  .autcom-item-load {
+
+    .autcom-load-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="alert alert-danger" role="alert" [class.hide]="!hasError">
+    Ocorreu um erro ao tentar realizar a pesquisa!
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <app-autocomplete
+        [events]="events"
+        (scrollAtBottom)="onScrollAtBottom($event)"
+        (searchChange)="handleSearchChange($event)"
+        (selected)="onEventSelected($event)"
+        [loading]="autoCompleteLoading"
+        [totalEvents]="eventResponse?.pagination.totalEvents"
+      ></app-autocomplete>
+
+      <div class="load-wrapper" [class.hide]="!loading">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="resultado-wrapper container-fluid">
+        <h5>RESULTADO</h5>
+        <p>Item selecionado: </p>
+        <pre>{{selectedEvent | json}}</pre>
+
+
+        <p>Resposta servidor: </p>
+        <pre>{{eventResponse | json}}</pre>
+      </div>
+    </div>
+  </div>
+</div>
