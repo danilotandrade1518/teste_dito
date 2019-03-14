@@ -24,21 +24,23 @@ Após isso, siga os passos à seguir:
 
 1. Populando o banco de dados:
 
-Navegue até a pasta **api** e execute o comando: <br>
+    - **Opção 1**: Navegue até a pasta **api** e execute o comando: <br>
 ```node populate-bd.js```
+    - **Opção 2**: execute um POST na api coletora após rodar a aplicação no endpoint ```/events```, eviando no corpo da requisição o evento conforme o exemplo à seguir: <br>
+```{event: 'buy'}```
 
 2. Instale as dependências da aplicação:
-    1. Navegue até a pasta **api** e execute o comando: <br>
+    - Navegue até a pasta **api** e execute o comando: <br>
  ```npm install```
 
-    2. Navegue até a pasta **frontend** e execute o comando: <br>
+    - Navegue até a pasta **frontend** e execute o comando: <br>
  ```npm install```
 
 3. Inicie a aplicação: <br>
-    1. Navegue até a pasta **api** e execute o comando: <br>
+    - Navegue até a pasta **api** e execute o comando: <br>
  ```npm start```
 
-    2. Navegue até a pasta **frontend** e execute o comando: <br>
+    - Navegue até a pasta **frontend** e execute o comando: <br>
  ```ng serve```
     
 
