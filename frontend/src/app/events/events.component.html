@@ -9,7 +9,6 @@
         (scrollAtBottom)="onScrollAtBottom($event)"
         (searchChange)="handleSearchChange($event)"
         (selected)="onEventSelected($event)"
-        [loading]="autoCompleteLoading"
         [totalEvents]="eventResponse?.pagination.totalEvents"
       ></app-autocomplete>
 

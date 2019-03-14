@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { EventResponse } from './../models/event-response.model';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventsService {
-  private url = 'http://localhost:3000/events?limit=100';
+  private url = environment.api_url + '/events?limit=100';
 
   constructor(private http: HttpClient) { }
 

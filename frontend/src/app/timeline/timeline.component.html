@@ -1,3 +1,17 @@
-<p>
-  timeline works!
-</p>
+<div class="container-fluid">
+  <h5>Timeline de eventos DITO</h5>
+
+  <pre>{{timeline | json}}</pre>
+
+  <div class="load-wrapper" [class.hide]="!loading">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>

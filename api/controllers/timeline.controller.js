@@ -12,7 +12,10 @@ router.get("/", (req, res, next) => {
     timelineService.convertEvents(result.events).subscribe(
       events => {
         const timeline = {'timeline': events}
-        res.json(timeline)
+
+        setTimeout(() => {
+          res.json(timeline)          
+        }, 3000);
       }
     )
   })
